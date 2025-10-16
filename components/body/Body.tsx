@@ -12,7 +12,7 @@ const suggestedData: SuggestedCardType = {
   id: "1",
   ownerName: "Francisco de Paula...",
   mainTitle: "Juegos olimpicos",
-  subtitle: "Torneo relampago",
+  subtitle: "Torne relampago",
 };
 
 const sharedItems: SharedItem[] = [
@@ -21,20 +21,20 @@ const sharedItems: SharedItem[] = [
     title: "Sustituciones 20230...",
     subtitle: "David · 14:05",
     avatarText: "D",
-    avatarColor: "#FF9800",
+    avatarColor: "#FF5722",
   },
   {
     id: "2",
     title: "Sustituciones 20230...",
     subtitle: "Salesianos La Cuesta · 21",
     iconName: "link",
-    avatarColor: "#90A4AE",
+    avatarColor: "#78909C",
   },
   {
     id: "3",
     title: "Relación de material ...",
     subtitle: "ERNESTO",
-    avatarText: "W",
+    avatarText: "E",
     avatarColor: "#3F51B5",
   },
 ];

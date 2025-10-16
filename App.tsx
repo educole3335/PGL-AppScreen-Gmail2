@@ -2,6 +2,8 @@ import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { View, StyleSheet } from "react-native";
 import Header from "./components/header/Header";
+import Body from "./components/body/Body";
+import BottomBar from "./components/footer/BottomBar";
 
 
 export default function App() {
@@ -9,6 +11,8 @@ export default function App() {
     <View style={styles.container}>
       <StatusBar style="light" />
       <Header />
+      <Body />
+      <BottomBar />
     </View>
   );
 }
