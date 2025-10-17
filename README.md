@@ -33,4 +33,3 @@ Ejemplo de inclusión en Markdown:
   - `component-implementation.md`
   - `icons.md`
 
-Si quieres que inserte una captura de ejemplo por mí, súbela a `docs/assets/` o indícame la ruta del archivo y la añadiré al README para que la comparación sea visible.
