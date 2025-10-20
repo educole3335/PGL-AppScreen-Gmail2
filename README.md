@@ -32,4 +32,3 @@ Ejemplo de inclusión en Markdown:
   - `atomic-design.md`
   - `component-implementation.md`
   - `icons.md`
-
