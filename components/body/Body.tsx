@@ -41,9 +41,16 @@ const sharedItems: SharedItem[] = [
 
 export default function Body() {
   return (
-    <ScrollView contentContainerStyle={styles.content}>
+    <ScrollView contentContainerStyle={styles.content} style={styles.scroll}>
       <Text style={[styles.sectionTitle, { marginTop: 8 }]}>Suggested</Text>
-      <SuggestedCard data={suggestedData} />
+      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.suggestedScroll} contentContainerStyle={{ paddingLeft: 4 }}>
+        <SuggestedCard data={suggestedData} />
+        <SuggestedCard data={suggestedData} />
+        <SuggestedCard data={suggestedData} />
+        <SuggestedCard data={suggestedData} />
+        <SuggestedCard data={suggestedData} />
+        <SuggestedCard data={suggestedData} />
+      </ScrollView>
 
       <View style={styles.rowHeader}>
         <Text style={styles.sectionTitle}>Date shared</Text>
@@ -81,8 +88,10 @@ export default function Body() {
 }
 
 const styles = StyleSheet.create({
-  content: { padding: 16 },
+  scroll: { flex: 1 },
+  content: { padding: 16, paddingBottom: 120, flexGrow: 1 },
   sectionTitle: { color: "#B0BEC5", fontSize: 16, marginBottom: 12 },
+  suggestedScroll: { height: 140, marginTop: 8, marginBottom: 12 },
   rowHeader: {
     flexDirection: "row",
     alignItems: "center",

@@ -13,7 +13,9 @@ export default function SuggestedCard({ data }: { data: SuggestedCardType }) {
           </Text>
         </View>
         <View style={{ marginLeft: 14 }}>
-          <Text style={styles.title}>{data.ownerName}</Text>
+          <Text style={styles.title} numberOfLines={1} ellipsizeMode="tail">
+            {data.ownerName}
+          </Text>
           <View style={{ marginTop: 10 }}>
             {(data.files && data.files.length > 0
               ? data.files.slice(0, 2)
@@ -46,7 +48,9 @@ export default function SuggestedCard({ data }: { data: SuggestedCardType }) {
                   />
                 </View>
                 <View style={{ marginLeft: 10 }}>
-                  <Text style={styles.fileTitle}>{f.title}</Text>
+                  <Text style={styles.fileTitle} numberOfLines={1} ellipsizeMode="tail">
+                    {f.title}
+                  </Text>
                   <Text style={styles.fileSubtitle}>{f.subtitle}</Text>
                 </View>
               </View>
@@ -61,13 +65,21 @@ export default function SuggestedCard({ data }: { data: SuggestedCardType }) {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: "#1F1F1F",
+    backgroundColor: "#2E2E2E",
     padding: 14,
     borderRadius: 12,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    minHeight: 92,
+    minHeight: 110,
+    width: 320,
+    marginRight: 12,
+    // subtle elevation to match material card in the design
+    elevation: 2,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.18,
+    shadowRadius: 2,
   },
   left: { flexDirection: "row", alignItems: "flex-start" },
   thumb: {
@@ -79,7 +91,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: 4,
   },
-  thumbInitial: { color: "#ffffff", fontWeight: "500", fontSize: 14 },
+  thumbInitial: { color: "#ffffff", fontWeight: "700", fontSize: 14 },
   greenIcon: {
     width: 20,
     height: 20,
@@ -88,7 +100,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  title: { color: "#FFFFFF", fontSize: 16, fontWeight: "500", marginTop: 2 },
+  title: { color: "#FFFFFF", fontSize: 16, fontWeight: "700", marginTop: 2 },
   fileRow: { flexDirection: "row", alignItems: "center", marginTop: 6 },
   fileIconWrap: {
     width: 32,
@@ -98,7 +110,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  fileTitle: { color: "#ECEFF1", fontSize: 14 },
-  fileSubtitle: { color: "#90A4AE", fontSize: 12, marginTop: 1 },
+  fileTitle: { color: "#ECEFF1", fontSize: 16 },
+  fileSubtitle: { color: "#B0BEC5", fontSize: 12, marginTop: 1 },
   subtitle: { color: "#90A4AE", marginLeft: 8 },
 });

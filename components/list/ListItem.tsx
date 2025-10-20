@@ -42,21 +42,21 @@ export default function ListItem({ item }: { item: SharedItem }) {
 
 const styles = StyleSheet.create({
   listItem: {
-    marginTop: 14,
+    marginTop: 12,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingVertical: 4,
+    paddingVertical: 6,
   },
   left: { flexDirection: "row", alignItems: "center" },
   circle: {
-    width: 36,
-    height: 36,
-    borderRadius: 18,
+    width: 40,
+    height: 40,
+    borderRadius: 20,
     alignItems: "center",
     justifyContent: "center",
   },
-  initial: { color: "#fff", fontWeight: "500", fontSize: 14 },
-  title: { color: "#fff", fontSize: 14, fontWeight: "400" },
-  subtitle: { color: "#90A4AE", marginTop: 2, fontSize: 12 },
+  initial: { color: "#fff", fontWeight: "700", fontSize: 14 },
+  title: { color: "#fff", fontSize: 16, fontWeight: "600" },
+  subtitle: { color: "#B0BEC5", marginTop: 2, fontSize: 12 },
 });

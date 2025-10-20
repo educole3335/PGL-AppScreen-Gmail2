@@ -6,6 +6,8 @@ import {
   StyleSheet,
   Animated,
   Pressable,
+  StatusBar as RNStatusBar,
+  Platform,
 } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 
@@ -40,7 +42,7 @@ export default function Header() {
             style={styles.menuIcon}
             android_ripple={{ color: "#00000011", radius: 20 }}
           >
-            <MaterialIcons name="menu" size={22} color="#CFD8DC" />
+            <MaterialIcons name="menu" size={24} color="#CFD8DC" />
           </Pressable>
 
           <TextInput
@@ -69,10 +71,14 @@ export default function Header() {
 }
 
 const styles = StyleSheet.create({
-  safeHeader: { backgroundColor: "#1F1F1F" },
+
+  safeHeader: {
+    backgroundColor: "#1F1F1F",
+    paddingTop: Platform.OS === "android" ? RNStatusBar.currentHeight || 8 : 0,
+  },
   headerContent: {
     height: 64,
-    paddingHorizontal: 12,
+    paddingHorizontal: 16,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
@@ -80,26 +86,26 @@ const styles = StyleSheet.create({
   searchBox: {
     flex: 1,
     backgroundColor: "#2A2A2A",
-    paddingHorizontal: 14,
-    paddingVertical: 10,
-    borderRadius: 10,
+    paddingHorizontal: 18,
+    paddingVertical: 12,
+    borderRadius: 28,
     marginRight: 14,
     flexDirection: "row",
     alignItems: "center",
   },
   menuIcon: {
-    width: 28,
+    width: 36,
     alignItems: "center",
     justifyContent: "center",
-    marginRight: 10,
+    marginRight: 8,
   },
-  searchInput: { color: "#fff", fontSize: 15, flex: 1, paddingVertical: 0 },
-  headerRight: { width: 44, alignItems: "flex-end" },
+  searchInput: { color: "#fff", fontSize: 20, flex: 1, paddingVertical: 0 },
+  headerRight: { width: 48, alignItems: "flex-end" },
   profileAvatar: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: "#78909C",
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    backgroundColor: "#90A4AE",
     borderWidth: 2,
     borderColor: "#263238",
     alignItems: "center",
